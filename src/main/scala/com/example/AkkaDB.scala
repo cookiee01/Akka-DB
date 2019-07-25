@@ -27,3 +27,4 @@ class AkkaDB extends Actor{
     case o => Status.Failure(new ClassNotFoundException)
   }
 }
+
