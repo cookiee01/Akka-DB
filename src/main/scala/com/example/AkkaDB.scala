@@ -18,7 +18,7 @@ class AkkaDB extends Actor{
       sender() ! Status.Success
     case GetRequest(key) =>
       logger.info("received GetRequest - key: {}", key)
-      val response: Option[String] = map.get(key)
+      val response: Option[Object] = map.get(key)
       response match{
         case Some(x) => sender() ! x
         case None => sender() ! Status.Failure(new
